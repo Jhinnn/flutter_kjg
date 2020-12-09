@@ -1,32 +1,28 @@
-class NewsModel {
-  final List<NewsItem> newsList;
+class ExhibitionHallModel {
+  final List<ExhibitionHallItem> exhibitionHallList;
 
-  NewsModel({this.newsList});
+  ExhibitionHallModel({this.exhibitionHallList});
 
-  factory NewsModel.fromJson(Map<String, dynamic> json) {
+  factory ExhibitionHallModel.fromJson(Map<String, dynamic> json) {
     var dataJson = json['data'] as List;
-    List<NewsItem> datas =
-    dataJson.map((i) => NewsItem.fromJson(i)).toList();
-    return NewsModel(newsList: datas);
+    List<ExhibitionHallItem> datas =
+    dataJson.map((i) => ExhibitionHallItem.fromJson(i)).toList();
+    return ExhibitionHallModel(exhibitionHallList: datas);
   }
 
 }
 
-class NewsItem {
+class ExhibitionHallItem {
   final String id;
-  final String pic;
-  final String title;
-  final String time;
+  final String name;
 
-  NewsItem({this.id, this.pic, this.title, this.time});
+  ExhibitionHallItem({this.id, this.name});
 
-  factory NewsItem.fromJson(Map<String, dynamic> json) {
+  factory ExhibitionHallItem.fromJson(Map<String, dynamic> json) {
 
-    return NewsItem(
+    return ExhibitionHallItem(
       id: json['id'],
-      pic: json['pic'],
-      title: json['title'],
-      time: json['time'],
+      name: json['name'],
     );
   }
 }

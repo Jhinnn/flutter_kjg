@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Video extends StatelessWidget {
+class VideoPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build

@@ -21,17 +21,22 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  http: ^0.12.0+4
+  flutter_color_plugin: ^0.0.2
+  flutter_swiper: ^1.0.6
+  flutter_webview_plugin: ^0.3.11
   flutter:
     sdk: flutter
-
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.0
 
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -80,3 +85,10 @@ flutter:
     - imgs/niunai.png
     - imgs/shuihu.png
     - imgs/taiyang.png
+    - imgs/arrow_right.png
+    - imgs/code.png
+    - imgs/umsocial_qq.png
+    - imgs/umsocial_qzone.png
+    - imgs/umsocial_sina.png
+    - imgs/umsocial_wechat.png
+    - imgs/umsocial_wechat_timeline.png

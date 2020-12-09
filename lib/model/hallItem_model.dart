@@ -1,28 +1,36 @@
-class ExhibitionHallModel {
-  final List<ExhibitionHallItem> exhibitionHallList;
+class HallItemModel {
+  final List<HallItem> hallItemList;
+  final String name;
+  final String imgs;
+  final String desc;
 
-  ExhibitionHallModel({this.exhibitionHallList});
+  HallItemModel({this.hallItemList, this.name, this.imgs, this.desc});
 
-  factory ExhibitionHallModel.fromJson(Map<String, dynamic> json) {
-    var dataJson = json['data'] as List;
-    List<ExhibitionHallItem> datas =
-    dataJson.map((i) => ExhibitionHallItem.fromJson(i)).toList();
-    return ExhibitionHallModel(exhibitionHallList: datas);
+  factory HallItemModel.fromJson(Map<String, dynamic> json) {
+    var dataJson = json['data']['item'] as List;
+    String name = json['data']['name'];
+    String imgs = json['data']['imgs'];
+    String desc = json['data']['desc'];
+    List<HallItem> datas =
+    dataJson.map((i) => HallItem.fromJson(i)).toList();
+    return HallItemModel(hallItemList: datas, name: name, imgs: imgs, desc: desc);
   }
 
 }
 
-class ExhibitionHallItem {
+class HallItem {
   final String id;
-  final String name;
+  final String title;
+  final String imgs;
 
-  ExhibitionHallItem({this.id, this.name});
+  HallItem({this.id, this.title, this.imgs});
 
-  factory ExhibitionHallItem.fromJson(Map<String, dynamic> json) {
+  factory HallItem.fromJson(Map<String, dynamic> json) {
 
-    return ExhibitionHallItem(
+    return HallItem(
       id: json['id'],
-      name: json['name'],
+      title: json['title'],
+      imgs: json['imgs'],
     );
   }
 }

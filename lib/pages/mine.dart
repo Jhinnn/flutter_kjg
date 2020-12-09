@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Mine extends StatelessWidget {
+class MinePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -151,7 +151,6 @@ class Mine extends StatelessWidget {
 
       )
     );
-
 
     return Scaffold(
       backgroundColor: Colors.white,
